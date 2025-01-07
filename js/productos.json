@@ -1,0 +1,245 @@
+[
+    {
+        "id": "abaya-01",
+        "titulo": "Abaya 01",
+        "imagen": "./img/abayas/01.jpg",
+        "categoria": {
+            "nombre": "Abayas",
+            "id": "abayas" 
+        },
+        "precio": 1000
+    },
+    {
+        "id": "abaya-02",
+        "titulo": "Abaya 02",
+        "imagen": "./img/abayas/02.jpg",
+        "categoria": {
+            "nombre": "Abayas",
+            "id": "abayas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "abaya-03",
+        "titulo": "Abaya 03",
+        "imagen": "./img/abayas/03.jpg",
+        "categoria": {
+            "nombre": "Abayas",
+            "id": "abayas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "abaya-04",
+        "titulo": "Abaya 04",
+        "imagen": "./img/abayas/04.jpg",
+        "categoria": {
+            "nombre": "Abayas",
+            "id": "abayas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "abaya-05",
+        "titulo": "Abaya 05",
+        "imagen": "./img/abayas/05.jpg",
+        "categoria": {
+            "nombre": "Abayas",
+            "id": "abayas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "abaya-06",
+        "titulo": "Abaya 06",
+        "imagen": "./img/abayas/06.jpg",
+        "categoria": {
+            "nombre": "Abayas",
+            "id": "abayas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "abaya-07",
+        "titulo": "Abaya 07",
+        "imagen": "./img/abayas/07.jpg",
+        "categoria": {
+            "nombre": "Abayas",
+            "id": "abayas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "abaya-08",
+        "titulo": "Abaya 08",
+        "imagen": "./img/abayas/08.jpg",
+        "categoria": {
+            "nombre": "Abayas",
+            "id": "abayas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "abaya-09",
+        "titulo": "Abaya 09",
+        "imagen": "./img/abayas/09.jpg",
+        "categoria": {
+            "nombre": "Abayas",
+            "id": "abayas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "abaya-10",
+        "titulo": "Abaya 10",
+        "imagen": "./img/abayas/10.jpg",
+        "categoria": {
+            "nombre": "Abayas",
+            "id": "abayas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "abaya-11",
+        "titulo": "Abaya 11",
+        "imagen": "./img/abayas/11.jpg",
+        "categoria": {
+            "nombre": "Abayas",
+            "id": "abayas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "abaya-12",
+        "titulo": "Abaya 12",
+        "imagen": "./img/abayas/12.jpg",
+        "categoria": {
+            "nombre": "Abayas",
+            "id": "abayas"
+        },
+        "precio": 1000
+    },
+
+    {
+        "id": "hijab-01",
+        "titulo": "Hijab 01",
+        "imagen": "./img/hijabs/01.jpg",
+        "categoria": {
+            "nombre": "Hijabs",
+            "id": "hijabs"
+        },
+        "precio": 100
+    },
+    {
+        "id": "hijab-02",
+        "titulo": "Hijab 02",
+        "imagen": "./img/hijabs/02.jpg",
+        "categoria": {
+            "nombre": "Hijabs",
+            "id": "hijabs"
+        },
+        "precio": 100
+    },
+    {
+        "id": "hijab-03",
+        "titulo": "Hijab 03",
+        "imagen": "./img/hijabs/03.jpg",
+        "categoria": {
+            "nombre": "Hijabs",
+            "id": "hijabs"
+        },
+        "precio": 100
+    },
+    {
+        "id": "hijab-04",
+        "titulo": "Hijab 04",
+        "imagen": "./img/hijabs/04.jpg",
+        "categoria": {
+            "nombre": "Hijabs",
+            "id": "hijabs"
+        },
+        "precio": 100
+    },
+    {
+        "id": "hijab-05",
+        "titulo": "Hijab 05",
+        "imagen": "./img/hijabs/05.jpg",
+        "categoria": {
+            "nombre": "Hijabs",
+            "id": "hijabs"
+        },
+        "precio": 100
+    },
+    {
+        "id": "hijab-06",
+        "titulo": "Hijab 06",
+        "imagen": "./img/hijabs/06.jpg",
+        "categoria": {
+            "nombre": "Hijabs",
+            "id": "hijabs"
+        },
+        "precio": 100
+    },
+    {
+        "id": "hijab-07",
+        "titulo": "Hijab 07",
+        "imagen": "./img/hijabs/07.jpg",
+        "categoria": {
+            "nombre": "Hijabs",
+            "id": "hijabs"
+        },
+        "precio": 100
+    },
+    {
+        "id": "hijab-08",
+        "titulo": "Hijab 08",
+        "imagen": "./img/hijabs/08.jpg",
+        "categoria": {
+            "nombre": "Hijabs",
+            "id": "hijabs"
+        },
+        "precio": 100
+    },
+
+    {
+        "id": "perfume-01",
+        "titulo": "Perfume 01",
+        "imagen": "./img/perfumes/01.jpg",
+        "categoria": {
+            "nombre": "Perfumes",
+            "id": "perfumes"
+        },
+        "precio": 10
+    },
+    {
+        "id": "perfume-02",
+        "titulo": "Perfume 02",
+        "imagen": "./img/perfumes/02.jpg",
+        "categoria": {
+            "nombre": "Perfumes",
+            "id": "perfumes"
+        },
+        "precio": 10
+    },
+    {
+        "id": "perfume-03",
+        "titulo": "Perfume 03",
+        "imagen": "./img/perfumes/03.jpg",
+        "categoria": {
+            "nombre": "Perfumes",
+            "id": "perfumes"
+        },
+        "precio": 10
+    },
+    {
+        "id": "perfume-04",
+        "titulo": "Perfume 04",
+        "imagen": "./img/perfumes/04.jpg",
+        "categoria": {
+            "nombre": "Perfumes",
+            "id": "perfumes"
+        },
+        "precio": 10
+    }
+
+]

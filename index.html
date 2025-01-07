@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MaryamShop</title>
+        <!--Importamos la librería de iconos de bootstrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="./css/index.css">
+    </head>
+    <body>
+        <!--General container-->
+        <div class="general-container">
+            <!--Header para la parte de Mobile-->
+            <header class="header-mobile">
+                <h1 class="titulo-mobile">MaryamShop</h1>
+                <!--Boton menu Mobile-->
+                <button class="open-menu-mobile" id="open-menu-mobile">
+                    <i class="bi bi-list"></i>
+                </button>
+            </header>
+            <!--Left sidebar navigation-->
+            <aside>
+                 <!--Boton menu Mobile-->
+                 <button class="close-menu-mobile" id="close-menu-mobile">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+                <header>
+                    <h1 class="logo">MaryamShop</h1>
+                </header>
+                <nav>
+                    <ul class="menu">
+                        <!--Dejamos el botón "Todos los productos" activo-->
+                        <!--NOTA: La clase boton-categoria la usaremos en el JS para hacer los botones del boton del carrito-->
+                        <li><button id="todos" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i> Todos los productos</button></li>
+                        <li><button id="abayas" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Abayas</button></li>
+                        <li><button id="hijabs" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Hijabs</button></li>
+                        <li><button id="perfumes" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Perfumes</button></li>
+                        <li><a class="boton-menu boton-carrito" href="./carrito.html"><i class="bi bi-cart-fill"></i> Carrito<span class="numerito" id="numerito">0</span></a></li>
+                    </ul>
+                </nav>
+                <footer>
+                    <p class="texto-footer">© 2024 Maryam Coder</p>
+                </footer>
+
+            </aside>
+            <!--Right main content section-->
+            <main>
+                <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
+                <!--Contenedor de productos-->
+                <div id="contenedor-productos" class="contenedor-productos">
+                    <!--Esto se va a rellenar con la función JS cargarProductos()-->
+                </div>
+
+            </main>
+
+        </div>
+        <script src="./js/index.js" type="module"></script>
+        <script src="./js/menu.js"></script>
+    </body>
+</html>

@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/*.root-> pseudo-selector (selector especial) que representa la raíz del documento y lo usamos
+para definir variables CSS que queremos que estén disponibles en toda la página web*/
+:root {
+    --clr-main: #8e5d89;
+    --clr-main-light: #ceb4cb;
+    --clr-white: #ececec;
+    --clr-gray: #e2e2e2;
+    --clr-red: #961818;
+}
+
+* {
+    margin: 0; /*elimina márgenes predeterminados del navegador*/
+    padding: 0; /*elimina paddings predeterminados del navegador*/;
+    box-sizing: border-box; /*la medida de la caja = limite del borde de la caja*/
+    font-family: 'Rubik', sans-serif; 
+}
+
+/*reseteamos los elementos a margen 0*/
+h1, h2, h3, h4, h5, h6, p, a, input, textarea {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.general-container {
+    display: grid; /*disposición de los elementos del contenedor en rejilla: filas y columnas*/
+    grid-template-columns: 1fr 4fr;/*define las columnas del grid, de modo que la 1a columna ocupe una fracción del espacio disponible
+                                        y que la 2a columna ocupe 4 fracciones del espacio disponible*/
+    background-color: var(--clr-main  );
+}
+
+aside {
+    padding: 2rem;
+    padding-right: 0;/*quitamos el padding de la derecha del aside para juntarnos con el main*/
+    color: var(--clr-white);
+   
+    position: sticky; /*posicionamos el aside para que se quede fijo*/
+    top: 0;/*indicamos que se quede fijo en la parte superior del viewport*/
+    height: 100vh;/*indicamos que la altura del aside debe ocupar el 100% del viewport height*/
+    
+    display: flex; /*convertimos el aside en un contenedor flexible*/
+    flex-direction: column;/*la dirección principal de los elementos será en columnas verticalmente (uno debajo del otro)*/
+    justify-content: space-between;/*colocame los elementos separados lo máximo posible*/
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+}
+
+.boton-menu {
+    background-color: transparent;
+    border: 0;
+    color: var(--clr-white);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    font-size: .90rem;
+
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+
+    position: relative;
+
+
+}
+
+/*NOTA IMPORTANTE:
+ Para que los iconos funcionen al rotarlos, hay que poner display:flex para que se posicionen en columnas
+ y así poder rotarlos, SINO NO FUNCIONARÁ
+*/
+.boton-categoria > i.bi-hand-index-thumb-fill, 
+.boton-categoria > i.bi-hand-index-thumb {
+    transform: rotateZ(90deg);
+}
+
+.boton-categoria.active,
+.boton-carrito.active {
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    width: 100%; /*estiramos hasta que toque con el main*/
+}
+
+/*----TRUQUITO PARA EL BORDE BLANCO ENTRE EL MENU Y EL MAIN----*/
+.boton-categoria.active::before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    right: 0;
+    bottom: 100%; /*lo mueve 100% hacia arriba*/
+    background-color: transparent;
+    border-bottom-right-radius: .5rem;
+    box-shadow: 0 1rem var(--clr-white);
+
+}
+
+.boton-categoria.active::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    right: 0;
+    top: 100%; /*lo mueve 100% hacia arriba*/
+    background-color: transparent;
+    border-top-right-radius: .5rem;
+    box-shadow: 0 -1rem var(--clr-white);
+
+}
+
+/*-----------------------------------------------------------------*/
+
+.boton-carrito {
+    margin-top: 2rem;
+}
+
+.numerito {
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    padding: .15rem .25rem;
+    border-radius: .25rem;
+}
+
+.boton-carrito.active .numerito {
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+}
+
+
+.texto-footer {
+    color: var(--clr-main-light);
+    font-size: 0.80rem;
+}
+
+main {
+    background-color: var(--clr-white);
+    margin: 1rem; /*Separamos el main del aside__DETALLE TOP encima de Todos los productos*/
+    margin-left: 0; /*DETALLE BOTONES MENU PEGADO AL MAIN*/
+    border-radius: 2rem;
+    padding: 3rem;
+}
+
+.titulo-principal {
+    color: var(--clr-main);
+    margin-bottom: 2rem;
+}
+
+.contenedor-productos {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); /*formamos la rejilla con 4 columnas, donde cada 1 ocupa 1fr del espacio disponible*/
+    gap: 1rem;/*separamos los elementos entre sí*/
+    
+}
+
+.producto {
+    margin-bottom: 5rem;
+}
+
+.producto-imagen {
+    max-width: 100%; /*ajustamos las imgs para que ocupen el máximo espacio posible del contenedor y se adapten a ese espacio*/
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.producto-detalles {
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+    padding: 0.6rem;
+    border-radius: 1rem;
+
+    margin-top: -2rem;/*subimos el box para q aplaste la foto*/
+    position: relative;/*lo posicionamos relativamente para que se vea por encima*/
+
+    display: flex;
+    flex-direction: column; /*posicionamos los detalles en columnas--> BOTON AGREGAR OCUPA TODO SU ESPACIO HORIZONTAL*/
+    gap: 0.25rem;
+}
+
+.producto-titulo {
+    font-size: 1rem;
+}
+
+.producto-agregar {
+    border: 0;
+    background-color: var(--clr-white);
+    padding: 0.5rem;
+    color: var(--clr-main);
+    border: 2px solid var(--clr-white);
+    
+    text-transform: uppercase; /*transformamos el texto de minuscula a mayuscula*/
+    border-radius: 1rem;
+    
+    cursor: pointer;/*cuando estemos encima del boton agregar el cursor se convierte en dedito*/
+
+    transition: background-color .3s, color .3s; /*hacemos que el color de fondo y el color te texto tarden 3 segundos en aparecer TOOOOOPPPPP*/
+}
+
+.producto-agregar:hover {
+    background-color: var(--clr-main-light);
+    color: var(--clr-white);
+    font-weight: 700;
+}
+
+
+/*----CARRITO----*/
+
+.contenedor-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.carrito-vacio,
+.carrito-comprado {
+    color: var(--clr-main);
+    
+}
+
+.carrito-productos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.carrito-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-gray);
+    padding: .5rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+    color:#443243;
+
+}
+
+.carrito-producto small {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.carrito-producto p {
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+.carrito-producto-imagen {
+    width: 4rem;
+    border-radius: .6rem;
+}
+
+.carrito-producto-eliminar {
+    border: none;
+    background-color: transparent;
+    color: var(--clr-red);
+    cursor: pointer;
+}
+
+.carrito-acciones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrito-acciones-vaciar {
+    border: none;
+    background-color: var(--clr-gray);
+    padding: 1rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    color: var(--clr-main);
+    cursor: pointer;
+}
+
+.carrito-acciones-derecha {
+    display: flex;
+    align-items: center;
+}
+
+.carrito-acciones-total {
+    display: flex;
+    background-color: var(--clr-gray);
+    padding: 1rem;
+    text-transform: uppercase;
+    color: var(--clr-main);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    gap: 1rem;
+
+}
+
+.carrito-acciones-comprar {
+    border: none;
+    background-color: var(--clr-main);
+    padding: .55rem;
+    text-transform: uppercase;
+    color: var(--clr-white);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    cursor: pointer;
+}
+
+.disabled {
+    display: none;
+}
+
+.header-mobile {
+    display: none;
+}
+
+/*hacemos que el close menu no se vea en el desktop*/
+.close-menu-mobile {
+    display: none;
+}
+
+
+
+/*** MEDIA QUERIES ***/
+@media screen and (max-width:1080px){
+    .logo {
+        margin-right: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:850px) {
+
+    .logo {
+        margin-right: 1rem;
+        font-size: 1.5rem;
+    }
+    .contenedor-productos {
+        grid-template-columns: 1fr 1fr 1fr; /*convertimos el contenedor de productos en 3 columnas */
+    }
+}
+
+
+@media screen and (max-width:675px) {
+
+   
+   
+    .general-container {
+        grid-template-columns: 1fr; /*convertimos el menu y main en una columna conjunta*/
+        padding: 1rem;
+
+        min-height: 100vh; /*hacemos que el ocupe toda la altura del viewport */
+        display: flex; /*flexibilizamos los elementos en linea*/
+        flex-direction: column;/*orientacion en columna*/
+    }
+
+    aside {
+        position: fixed;
+        z-index: 9;/*establecemos el aside más arriba que todos los demás elementos*/
+        background-color: var(--clr-main);
+        left: 0; /*le quitamos el margin de la izq*/
+        box-shadow: 0 0 0 100vmax rgba(0,0,0,.79); /*sombrear parte de productos al aparecer el menu*/
+        /*establecemos 100vmax de spread-radius, queriendo expandir el color sombreado
+          en 100 y en vmax q es la unidad más grande de ancho y alto del viewport, 
+          y con ello cubrir todo el area visible y más*/
+
+        transform: translateX(-100%); /*escondemos horizontalmente y hacia la izq el menu*/
+        opacity: 0; /*quitamos la opacidad*/
+        visibility: hidden; /*hacemos que el elemento no sea visible pero que permanezca para usarlo*/
+    }
+
+    .aside-visible {
+        transform: translateX(0); /*hacemos que aparezca de nuevo*/
+        opacity: 1; /*le devolvemos la opacidad*/
+        visibility: visible; /*hacemoos que sea visible*/
+        transition: .3s;
+        
+    }
+
+    .boton-categoria.active::before,
+    .boton-categoria.active::after {
+        display: none; /*le quitamos el truquito*/
+    }
+
+    main {
+        margin: 0; /*dejamos espacio entre contenedor de productos y main*/
+        padding: 2rem; /*quitamos espacio en blanco de más*/
+    }
+
+
+    .contenedor-productos {
+        grid-template-columns: 1fr 1fr; /*convertimos el contenedor de productos en 2 columnas */
+    }
+
+    .header-mobile {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem;
+        align-items: center; /*centramos los elementos verticalmente*/
+    }
+
+    .titulo-mobile , .logo {
+        color: var(--clr-gray);
+        font-size: 1.3rem;
+        margin-left: 0;
+        
+    }
+
+    .open-menu-mobile,
+    .close-menu-mobile {
+        background-color: transparent;
+        border: 0;
+        font-size: 2rem;
+        color: var(--clr-gray);
+        cursor: pointer;
+    }
+
+    .close-menu-mobile {
+        display: block; /*hacemos que la x aparezca en el media queries pero no en el desktop*/
+        position: absolute;
+        top: 2rem;
+        right: 1rem;
+        font-size: 1.5rem;
+    
+    }
+
+    .carrito-producto-subtotal {
+        display: none;
+    }
+
+    .carrito-producto {
+        flex-wrap: wrap;/*los elementos que forman cada producto del carrito se iran desplazando
+                            hacia abajo, cada vez que se vaya achicando la pantalla*/
+        gap: .5rem;
+        padding: .5rem;
+
+    }
+
+    .carrito-acciones {
+        flex-wrap: wrap;
+        row-gap: .5rem;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    .contenedor-productos {
+        grid-template-columns: 1fr; /*convertimos el contenedor de productos en 3 columnas */
+    }
+}
+
+
+
