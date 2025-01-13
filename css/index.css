@@ -460,6 +460,19 @@ main {
     .contenedor-productos {
         grid-template-columns: 1fr; /*convertimos el contenedor de productos en 3 columnas */
     }
+
+    .producto-imagen {
+        height: 70% ;
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+    .producto {
+        margin-bottom: 0rem;
+        margin-top: 0.1rem;
+    }
+
+    
 }
 
 
