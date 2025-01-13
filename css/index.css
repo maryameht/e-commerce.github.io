@@ -462,7 +462,7 @@ main {
     }
 
     .producto-imagen {
-        height: 70% ;
+        height: 20rem;
         width: 100%;
         border-radius: 1rem;
     }
